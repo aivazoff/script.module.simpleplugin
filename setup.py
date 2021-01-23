@@ -16,7 +16,7 @@ addon_dir = os.path.join(this_dir, 'script.module.simpleplugin')
 
 
 def get_version():
-    with open(os.path.join(addon_dir, 'addon.xml'), 'rb') as addon_xml:
+    with open(os.path.join(addon_dir, 'addon.xml'), 'r') as addon_xml:
         return re.search(r'(?<!xml )version="(.+?)"', addon_xml.read()).group(1)
 
 
